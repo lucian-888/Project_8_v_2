@@ -1,0 +1,403 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  background-color: black;
+  color: white;
+  font-family: Montserrat, sans-serif;
+  min-height: 100vh;
+  padding-top: 120px;  /* Add padding for fixed header */
+}
+
+/* Header and Navigation */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+}
+
+h1 {
+  color: black;
+  font-weight: 800;
+}
+
+#dev-title {
+   color: black;
+   font-weight: 700;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item {
+  list-style: none;
+  margin-left: 2rem;
+}
+
+.nav-link {
+  color: black !important;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.4s ease-out;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: crimson !important;
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: none;
+  cursor: pointer;
+  /*margin-right: 50px;
+  margin-left: 60px;*/
+}
+
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: black;
+  transition: all 0.3s ease;
+}
+
+/* Main Content */
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  max-width: 1200px;
+  padding-top: 120px;
+  margin: 0 auto; /* Ensure it's centered */
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  padding: 40px 20px;
+}
+
+.par1 {
+  color: red;
+  font-size: 17px;
+  line-height: 4px;
+  opacity: 80%;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+/* Compétences */
+.skills-list {
+    list-style-type: none;
+}
+
+.skills-list li {
+    
+    padding: 10px;
+    margin-bottom: 100px;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.skill-item {
+    background-color: white /*#f0f0f0*/;
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-5px);
+}
+
+.skill-item i {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.skill-item span {
+    display: block;
+    font-size: 0.9em;
+    color: black;
+}
+
+#competences h2 {
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+#projets h2 {
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+#contact {
+    padding-top: 70px;
+    margin-bottom: 50px;
+}
+
+/* Grille des projets */
+.grid-container {
+    margin-top: 17px;
+    margin-bottom: 80px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    color: black;
+    gap: 20px;
+    width: 100%;
+}
+
+.grid-item {
+    background-color: white /*#f4f4f4*/;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: justify;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);   /*box-shadow: 0 2px 5px rgba(0,0,0,0.1);*/
+}
+
+.grid-item h3 {
+    margin-top: 0;
+    color: black;
+}
+
+.description {
+    font-weight: bold;
+}
+
+#about {
+    margin-top: 200px;
+    margin-bottom: 50px;
+}
+
+/* Footer */
+footer {
+  background-color: white;
+  color: black;
+  font-size: 11px;
+  font-weight: bold;
+  padding: 20px 0 4px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+/* Contact Form */
+form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  margin-top: 10px;
+}
+
+form input,
+form textarea {
+  padding: 10px;
+  margin-top: 5px;
+}
+
+form button {
+  margin-top: 33px;
+  padding: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button {
+  margin-bottom: 33px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+.hamburger {
+    display: block;
+    margin-right: 50px;
+    padding-left:90px;
+  }
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+.nav-menu {
+    position: fixed;
+    left: -100%;
+    top: 120px;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+    z-index: 999;
+  }
+
+.nav-menu.active {
+    margin-top: 8px;
+    left: 0;
+  }
+
+.nav-item {
+    margin: 1.8rem 0;
+  }
+
+#competences {
+    margin-bottom: 50px;
+  }
+
+ .container-fluid {
+    width: 100%; 
+    padding-left: 20px;
+    padding-right: 50px;
+    padding-top: 200px;
+    margin-top: -150px;
+    text-align: center;
+  }
+
+.nav-branding {
+    max-width: 200px;
+    margin-right: 180px;
+    padding-right: 30px;
+  }
+
+h1 {
+    font-size: 25px;
+}
+ 
+#dev-title {
+    font-size: 19px;
+  }
+
+.navbar {
+    gap: 60px;
+}
+}
+
+/* Adjust content for smaller screens */
+@media (max-width: 768px) {
+  header {
+   position: fixed;
+  }
+   .nav-branding {
+    max-width: 120px;
+    margin-right: 20px;
+  }
+
+  h1 {
+    margin-top:25px;
+    margin-bottom: 0;
+    font-size: 1.2rem;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .container-fluid {
+    width: 100%; 
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #dev-title {
+    font-size: 0.7rem;
+    margin: 0;
+  }
+
+  .hero {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    width: 100%;
+    font-size: 0.9rem;
+    
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  p {
+    font-size: 0.9rem;
+ }
+
+  .hamburger {
+    display: block;
+    margin-right: 30px;
+    padding-left:20px;
+  }
+ 
+  .navbar {
+    gap: 40px;
+  }
+}
+
