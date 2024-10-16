@@ -258,11 +258,11 @@ button {
 /* Media Queries */
 @media (max-width: 1280px) {
   .navbar {
-    gap: 80px;
+    gap: 60px;
   }
 
   .nav-item {
-    margin: 1.8rem 0;
+    margin: 1.4rem 0;
   }
 }
 
@@ -313,7 +313,7 @@ button {
   }
 
 .nav-item {
-    margin: 1.8rem 0;
+    margin: 1.4rem 0;
   }
 
 #competences {
