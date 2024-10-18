@@ -352,7 +352,7 @@ h1 {
 /* Adjust content for smaller screens */
 @media (max-width: 768px) {
   html {
-  scroll-padding-top: 120px;
+  scroll-padding-top: 70px;
 }
 
   body {
