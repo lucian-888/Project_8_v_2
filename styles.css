@@ -280,6 +280,10 @@ h1, #dev-title {
 
 /* Media Queries */
 @media (max-width: 1024px) {
+  body {
+    line-height:1;
+  }
+
 .hamburger {
     display: block;
     margin-right: 50px;
@@ -314,6 +318,7 @@ h1, #dev-title {
 .nav-menu.active {
     margin-top: 8px;
     left: 0;
+    display:block;
   }
 
    .nav-link {
@@ -427,7 +432,7 @@ h1 {
 
   p {
     font-size: 0.9rem;
- }
+  }
 
   .hamburger {
     display: block;
