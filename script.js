@@ -32,14 +32,12 @@ document.getElementById('contact-form').addEventListener('submit', function(even
   emailjs.sendForm('service_a3l9l1x', 'template_8gg5c5y', this)
       .then(function(response) {
           // This function runs if the email is sent successfully
-          console.log('SUCCESS!', response.status, response.text);
           // Show a success message to the user
           alert('Message sent successfully!');
           // Reset the form fields after successful submission
           document.getElementById('contact-form').reset();
       }, function(error) {
           // This function runs if there's an error in sending the email
-          console.log('FAILED...', error);
           // Show an error message to the user
           alert('Failed to send message. Please try again.');
       });
